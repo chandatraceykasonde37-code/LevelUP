@@ -1,0 +1,1796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Level Up | Luxury Digital Invitations</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   LEVEL UP — GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #08080c;
+    color: #f5f0f7;
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(8, 8, 12, 0.88);
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+}
+
+.navbar {
+    width: min(1200px, 92%);
+    margin: auto;
+
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Cinzel", serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.logo span {
+    color: #b879ff;
+}
+
+.menu {
+    display: none;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.nav-links a {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #b9b3bd;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffffff;
+}
+
+.book-nav {
+    padding: 12px 18px;
+    border: 1px solid rgba(212,175,55,0.6);
+    color: #e1c36a !important;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.home-hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 140px 20px 90px;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 75% 30%,
+            rgba(155, 93, 229, 0.17),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 20% 70%,
+            rgba(212, 175, 55, 0.08),
+            transparent 28%
+        ),
+        #08080c;
+}
+
+.home-hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.018) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.018) 1px,
+            transparent 1px
+        );
+
+    background-size: 70px 70px;
+
+    pointer-events: none;
+}
+
+.home-content {
+    width: min(900px, 92%);
+    margin: auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.7rem;
+    margin-bottom: 25px;
+}
+
+.home-content h1 {
+    font-family: "Cinzel", serif;
+    font-size: clamp(2.7rem, 7vw, 6rem);
+    line-height: 1.05;
+    font-weight: 500;
+}
+
+.home-content h1 span {
+    color: #b879ff;
+}
+
+.home-content p {
+    max-width: 680px;
+    margin: 30px auto;
+    color: #aaa4ae;
+    line-height: 1.9;
+    font-size: 0.95rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px 25px;
+
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    font-size: 0.7rem;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: linear-gradient(
+        135deg,
+        #d4af37,
+        #b78b1f
+    );
+
+    color: #09090c;
+
+    font-weight: 600;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(212,175,55,0.25);
+}
+
+.secondary-btn {
+    border: 1px solid rgba(197,140,255,0.5);
+    color: #d4b5ef;
+}
+
+.secondary-btn:hover {
+    background: rgba(155,93,229,0.12);
+    transform: translateY(-3px);
+}
+
+/* =====================================================
+   SECTION TITLES
+===================================================== */
+
+section {
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title small {
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.65rem;
+}
+
+.section-title h2 {
+    font-family: "Cinzel", serif;
+    font-weight: 500;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 14px 0;
+}
+
+.section-title p {
+    color: #99939e;
+    line-height: 1.7;
+}
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro {
+    padding: 100px 20px;
+    background: #0b0b10;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.intro-text p {
+    color: #aaa4ae;
+    line-height: 2;
+    font-size: 1rem;
+}
+
+/* =====================================================
+   LIVE INVITATION SHOWCASE
+===================================================== */
+
+.live-showcase {
+    padding: 110px 20px;
+    background: #08080c;
+}
+
+.live-invitation-card {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px;
+
+    padding: 30px;
+
+    background: #111117;
+
+    border: 1px solid rgba(212,175,55,0.25);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,0.5);
+}
+
+/* REAL INVITATION */
+
+.live-invitation-preview {
+    width: 100%;
+    height: 700px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #111;
+
+    border: 1px solid rgba(212,175,55,0.35);
+}
+
+.live-invitation-preview iframe {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+
+    display: block;
+}
+
+/* INVITATION INFORMATION */
+
+.live-invitation-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.design-badge {
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 8px 13px;
+
+    border: 1px solid rgba(212,175,55,0.45);
+
+    color: #d4af37;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.live-invitation-info h3 {
+    font-family: "Cinzel", serif;
+
+    font-size: 2.3rem;
+
+    font-weight: 500;
+
+    margin-top: 20px;
+}
+
+.design-name {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.6rem;
+
+    color: #c58cff;
+
+    margin: 8px 0 20px;
+}
+
+.live-invitation-info > p {
+    color: #aaa5a0;
+
+    line-height: 1.9;
+
+    font-size: 0.9rem;
+}
+
+.design-features {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin: 25px 0;
+}
+
+.design-features span {
+    padding: 8px 12px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(197,140,255,0.25);
+
+    color: #d0c8d8;
+
+    font-size: 0.65rem;
+}
+
+/* =====================================================
+   EVENTS
+===================================================== */
+
+.events {
+    padding: 110px 20px;
+    background: #0b0b10;
+}
+
+.event-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.event-card {
+    padding: 38px 22px;
+
+    text-align: center;
+
+    background: #101016;
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    transition: 0.35s;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(197,140,255,0.35);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.3);
+}
+
+.event-icon {
+    font-size: 2rem;
+
+    color: #d4af37;
+
+    margin-bottom: 18px;
+}
+
+.event-card h3 {
+    font-family: "Cinzel", serif;
+
+    font-size: 1rem;
+
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    color: #8f8993;
+
+    font-size: 0.78rem;
+
+    line-height: 1.7;
+}
+
+/* =====================================================
+   WHY LEVEL UP
+===================================================== */
+
+.why {
+    padding: 110px 20px;
+}
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.feature {
+    text-align: center;
+
+    padding: 42px 25px;
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    background: rgba(255,255,255,0.015);
+}
+
+.feature-icon {
+    font-size: 2rem;
+
+    color: #d4af37;
+
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-family: "Cinzel", serif;
+
+    font-size: 1rem;
+
+    margin-bottom: 15px;
+}
+
+.feature p {
+    color: #99939e;
+
+    line-height: 1.8;
+
+    font-size: 0.8rem;
+}
+
+/* =====================================================
+   HOW IT WORKS
+===================================================== */
+
+.how {
+    padding: 110px 20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #0b0b10,
+            #08080c
+        );
+}
+
+.steps {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    max-width: 1050px;
+
+    margin: auto;
+}
+
+.step {
+    text-align: center;
+
+    position: relative;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: auto auto 20px;
+
+    border-radius: 50%;
+
+    border: 1px solid #d4af37;
+
+    color: #d4af37;
+
+    font-family: "Cinzel", serif;
+}
+
+.step h3 {
+    font-family: "Cinzel", serif;
+
+    font-size: 0.95rem;
+
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #8e8992;
+
+    font-size: 0.75rem;
+
+    line-height: 1.7;
+}
+
+/* =====================================================
+   PACKAGES
+===================================================== */
+
+.packages {
+    padding: 110px 20px;
+
+    background: #0b0b10;
+}
+
+.package-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+    max-width: 1050px;
+
+    margin: auto;
+}
+
+.package {
+    padding: 38px 28px;
+
+    background: #101016;
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    text-align: center;
+
+    position: relative;
+}
+
+.package.featured {
+    border-color:
+        rgba(212,175,55,0.5);
+
+    transform: translateY(-8px);
+}
+
+.package-label {
+    color: #d4af37;
+
+    font-size: 0.6rem;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 15px;
+}
+
+.package h3 {
+    font-family: "Cinzel", serif;
+
+    font-size: 1.25rem;
+
+    margin-bottom: 15px;
+}
+
+.package p {
+    color: #99939e;
+
+    line-height: 1.8;
+
+    font-size: 0.78rem;
+}
+
+.package ul {
+    list-style: none;
+
+    margin: 25px 0;
+
+    text-align: left;
+}
+
+.package li {
+    padding: 9px 0;
+
+    color: #aaa4ae;
+
+    font-size: 0.75rem;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.05);
+}
+
+.package li::before {
+    content: "✦";
+
+    color: #d4af37;
+
+    margin-right: 9px;
+}
+
+/* =====================================================
+   CUSTOM CTA
+===================================================== */
+
+.custom {
+    padding: 120px 20px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(155,93,229,0.13),
+            transparent 45%
+        ),
+        #08080c;
+}
+
+.custom h2 {
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+}
+
+.custom h2 span {
+    color: #b879ff;
+}
+
+.custom p {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #99939e;
+
+    line-height: 1.8;
+}
+
+/* =====================================================
+   FINAL CTA
+===================================================== */
+
+.final-cta {
+    padding: 90px 20px;
+
+    background: #101016;
+
+    text-align: center;
+
+    border-top:
+        1px solid rgba(212,175,55,0.1);
+}
+
+.final-cta h2 {
+    font-family: "Cinzel", serif;
+
+    font-size: 2rem;
+
+    margin-bottom: 15px;
+}
+
+.final-cta p {
+    color: #99939e;
+
+    margin-bottom: 25px;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    padding: 65px 20px 35px;
+
+    text-align: center;
+
+    background: #060609;
+
+    border-top:
+        1px solid rgba(255,255,255,0.05);
+}
+
+.footer-logo {
+    font-family: "Cinzel", serif;
+
+    font-size: 1.5rem;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 10px;
+}
+
+footer > p {
+    color: #817b85;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+}
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 22px;
+
+    margin: 30px 0;
+}
+
+.footer-links a {
+    color: #8e8992;
+
+    font-size: 0.65rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+}
+
+.footer-links a:hover {
+    color: #d4af37;
+}
+
+.copyright {
+    color: #55515a;
+
+    font-size: 0.62rem;
+
+    margin-top: 25px;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .menu {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+
+        top: 78px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        background: #0b0b10;
+
+        display: none;
+
+        flex-direction: column;
+
+        border-bottom:
+            1px solid rgba(212,175,55,0.15);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .event-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        row-gap: 40px;
+    }
+
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .package.featured {
+        transform: none;
+    }
+
+    .live-invitation-card {
+        grid-template-columns: 1fr;
+
+        padding: 15px;
+    }
+
+    .live-invitation-preview {
+        height: 650px;
+    }
+
+    .live-invitation-info {
+        padding: 15px 5px 20px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    .logo {
+        font-size: 1.15rem;
+    }
+
+    .home-hero {
+        padding-top: 120px;
+    }
+
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .live-invitation-preview {
+        height: 600px;
+    }
+
+    .live-invitation-info h3 {
+        font-size: 1.8rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header>
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+LEVEL <span>UP</span>
+</a>
+
+<div class="menu" onclick="toggleMenu()">
+☰
+</div>
+
+<div class="nav-links" id="navLinks">
+
+<a href="index.html" class="active">
+Home
+</a>
+
+<a href="designs.html">
+Designs
+</a>
+
+<a href="events.html">
+Events
+</a>
+
+<a href="how-it-works.html">
+How It Works
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="book.html" class="book-nav">
+Book an Invitation
+</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main>
+
+<section class="home-hero">
+
+<div class="home-content">
+
+<div class="eyebrow">
+Luxury Digital Invitations
+</div>
+
+<h1>
+Make Your Moment
+<br>
+<span>Unforgettable.</span>
+</h1>
+
+<p>
+Beautiful digital invitations personally designed for
+weddings, birthdays, graduations and the moments that
+matter most.
+</p>
+
+<div class="buttons">
+
+<a href="designs.html" class="primary-btn">
+Explore Designs
+</a>
+
+<a href="book.html" class="secondary-btn">
+Book an Invitation
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>
+The Level Up Experience
+</small>
+
+<h2>
+More Than An Invitation
+</h2>
+
+</div>
+
+<div class="intro-text">
+
+<p>
+Your invitation should feel like the beginning of your
+special moment. At Level Up, every digital invitation is
+personally designed with your names, photographs,
+event details, RSVP information and your own style.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     REAL LIVE INVITATION
+===================================================== -->
+
+<section class="live-showcase">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>
+Featured Invitation
+</small>
+
+<h2>
+James & Chileshe
+</h2>
+
+<p>
+Explore a real luxury digital invitation created by Level Up.
+</p>
+
+</div>
+
+
+<div class="live-invitation-card">
+
+
+<!-- REAL LIVE WEBSITE -->
+
+<div class="live-invitation-preview">
+
+<iframe
+src="https://james-chileshe-wedding-invitation.netlify.app/"
+title="James and Chileshe Wedding Invitation"
+loading="lazy">
+</iframe>
+
+</div>
+
+
+<!-- INFORMATION -->
+
+<div class="live-invitation-info">
+
+<div class="design-badge">
+Luxury Wedding
+</div>
+
+<h3>
+James & Chileshe
+</h3>
+
+<div class="design-name">
+Royal Gold
+</div>
+
+<p>
+A complete interactive wedding invitation designed by
+Level Up. Guests can explore the invitation, view the
+wedding details, photographs, venue information, RSVP
+and other important sections.
+</p>
+
+
+<div class="design-features">
+
+<span>✓ Interactive</span>
+
+<span>✓ Countdown</span>
+
+<span>✓ RSVP</span>
+
+<span>✓ Maps</span>
+
+<span>✓ Photo Gallery</span>
+
+<span>✓ Mobile Friendly</span>
+
+</div>
+
+
+<div class="buttons">
+
+<a
+href="https://james-chileshe-wedding-invitation.netlify.app/"
+target="_blank"
+class="primary-btn">
+
+Open Full Invitation
+
+</a>
+
+<a
+href="book.html"
+class="secondary-btn">
+
+Choose This Style
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     EVENTS
+===================================================== -->
+
+<section class="events">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>
+Designed For Every Occasion
+</small>
+
+<h2>
+Your Moment. Your Style.
+</h2>
+
+<p>
+Digital invitations for life's biggest moments.
+</p>
+
+</div>
+
+
+<div class="event-grid">
+
+
+<div class="event-card">
+
+<div class="event-icon">
+♕
+</div>
+
+<h3>
+Weddings
+</h3>
+
+<p>
+Elegant invitations designed for your special day.
+</p>
+
+</div>
+
+
+<div class="event-card">
+
+<div class="event-icon">
+✦
+</div>
+
+<h3>
+Birthdays
+</h3>
+
+<p>
+Make your celebration feel even more special.
+</p>
+
+</div>
+
+
+<div class="event-card">
+
+<div class="event-icon">
+🎓
+</div>
+
+<h3>
+Graduations
+</h3>
+
+<p>
+Celebrate your achievement with a memorable invitation.
+</p>
+
+</div>
+
+
+<div class="event-card">
+
+<div class="event-icon">
+♡
+</div>
+
+<h3>
+Special Events
+</h3>
+
+<p>
+Custom invitations for the moments that matter.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     WHY LEVEL UP
+===================================================== -->
+
+<section class="why">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>
+Why Level Up?
+</small>
+
+<h2>
+Designed For Your Moment
+</h2>
+
+<p>
+You choose the style. Level Up creates the experience.
+</p>
+
+</div>
+
+
+<div class="feature-grid">
+
+
+<div class="feature">
+
+<div class="feature-icon">
+✦
+</div>
+
+<h3>
+Beautiful Designs
+</h3>
+
+<p>
+Luxury invitation designs created to make your event
+stand out.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+♡
+</div>
+
+<h3>
+Made For You
+</h3>
+
+<p>
+Your names, photos, date, venue, RSVP and details are
+customized personally.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+↗
+</div>
+
+<h3>
+Share Anywhere
+</h3>
+
+<p>
+Receive your finished invitation as a unique link that
+is easy to share.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     HOW IT WORKS
+===================================================== -->
+
+<section class="how">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>
+Simple Process
+</small>
+
+<h2>
+How Level Up Works
+</h2>
+
+<p>
+From choosing a design to sharing your invitation.
+</p>
+
+</div>
+
+
+<div class="steps">
+
+
+<div class="step">
+
+<div class="step-number">
+01
+</div>
+
+<h3>
+Choose
+</h3>
+
+<p>
+Browse the Level Up designs and choose the style you love.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+02
+</div>
+
+<h3>
+Book
+</h3>
+
+<p>
+Contact Level Up and provide your event details.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+03
+</div>
+
+<h3>
+We Create
+</h3>
+
+<p>
+Your invitation is personally designed and customized.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+04
+</div>
+
+<h3>
+Share
+</h3>
+
+<p>
+Receive your unique invitation link and share it with
+your guests.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     PACKAGES
+===================================================== -->
+
+<section class="packages">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>
+Choose Your Experience
+</small>
+
+<h2>
+Invitation Packages
+</h2>
+
+<p>
+Choose the level of experience you want for your guests.
+</p>
+
+</div>
+
+
+<div class="package-grid">
+
+
+<div class="package">
+
+<div class="package-label">
+Essential
+</div>
+
+<h3>
+Basic
+</h3>
+
+<p>
+A beautiful digital invitation for simple celebrations.
+</p>
+
+<ul>
+
+<li>Personalized names</li>
+
+<li>Event details</li>
+
+<li>Digital invitation link</li>
+
+<li>Mobile friendly</li>
+
+</ul>
+
+<a href="book.html" class="secondary-btn">
+Book Basic
+</a>
+
+</div>
+
+
+<div class="package featured">
+
+<div class="package-label">
+Most Popular
+</div>
+
+<h3>
+Premium
+</h3>
+
+<p>
+A more interactive invitation with additional features.
+</p>
+
+<ul>
+
+<li>Everything in Basic</li>
+
+<li>Photo gallery</li>
+
+<li>Countdown</li>
+
+<li>RSVP</li>
+
+<li>Maps</li>
+
+</ul>
+
+<a href="book.html" class="primary-btn">
+Book Premium
+</a>
+
+</div>
+
+
+<div class="package">
+
+<div class="package-label">
+Signature
+</div>
+
+<h3>
+Luxury
+</h3>
+
+<p>
+The complete Level Up experience for unforgettable events.
+</p>
+
+<ul>
+
+<li>Everything in Premium</li>
+
+<li>Custom luxury design</li>
+
+<li>Interactive animations</li>
+
+<li>Advanced event sections</li>
+
+<li>Personalized experience</li>
+
+</ul>
+
+<a href="book.html" class="secondary-btn">
+Book Luxury
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     CUSTOM DESIGN
+===================================================== -->
+
+<section class="custom">
+
+<div class="container">
+
+<h2>
+Have Your Own <span>Vision?</span>
+</h2>
+
+<p>
+Tell Level Up what you imagine and we can create a
+digital invitation around your event, colors, photographs,
+theme and personality.
+</p>
+
+<div class="buttons">
+
+<a href="book.html" class="primary-btn">
+Create My Invitation
+</a>
+
+<a href="designs.html" class="secondary-btn">
+View Designs
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
+
+<section class="final-cta">
+
+<div class="container">
+
+<h2>
+Ready To Level Up Your Invitation?
+</h2>
+
+<p>
+Let's create something your guests will remember.
+</p>
+
+<a href="book.html" class="primary-btn">
+Book Your Invitation
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="footer-logo">
+LEVEL UP
+</div>
+
+<p>
+Luxury Digital Invitations
+</p>
+
+
+<div class="footer-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="designs.html">
+Designs
+</a>
+
+<a href="events.html">
+Events
+</a>
+
+<a href="how-it-works.html">
+How It Works
+</a>
+
+<a href="about.html">
+About
+</a>
+
+<a href="book.html">
+Book
+</a>
+
+</div>
+
+
+<div class="copyright">
+© 2026 Level Up • Zambia
+</div>
+
+</footer>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+function toggleMenu() {
+
+    document
+        .getElementById("navLinks")
+        .classList
+        .toggle("active");
+
+}
+
+
+/* Close mobile menu after clicking a link */
+
+document
+    .querySelectorAll(".nav-links a")
+    .forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            document
+                .getElementById("navLinks")
+                .classList
+                .remove("active");
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
